@@ -70,7 +70,9 @@ function readQuote( day ) {
 // Insert name function using the global variable "currentUser"
 function insertNameFromFirestore() {
     currentUser.get().then(userDoc => {
+        console.log(currentUser.get() + "hihihi");
         //get the user name
+        console.log(userDoc.data() + " hi");
         var user_Name = userDoc.data().name;
         console.log(user_Name);
         $("#name-goes-here").text(user_Name); //jquery
